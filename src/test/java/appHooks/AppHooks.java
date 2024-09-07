@@ -11,13 +11,13 @@ public class AppHooks
 {
 	public WebDriver driver;
 		
-	@Before
+	@Before (order = 0)
 	public void launch_browser()
 	{
 		driver = DriverFactory.init_driver("chrome");
 	}
 	
-	@After (order=0)
+		@After (order=0)
 	public void quitBrow()
 	{
 		driver.quit();

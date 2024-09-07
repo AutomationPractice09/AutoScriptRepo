@@ -55,4 +55,13 @@ public class LoginPage
 		return warn;
 	}
 	
+	public InventoryPage doLogin(String un, String pwd)
+	{
+		driver.findElement(username).sendKeys(un);
+		driver.findElement(password).sendKeys(pwd);
+		driver.findElement(login).click();
+		System.out.println(driver.getTitle());
+		return new InventoryPage(driver);
+	}
+	
 }

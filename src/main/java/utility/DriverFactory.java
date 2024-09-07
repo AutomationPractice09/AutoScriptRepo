@@ -2,6 +2,7 @@ package utility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class DriverFactory 
@@ -15,6 +16,8 @@ public class DriverFactory
 	{
 		if(bname.equalsIgnoreCase("chrome"))
 		{
+//			ChromeOptions options = new ChromeOptions();
+//			options.addArguments("--headless");
 			driver = new ChromeDriver();
 			tdriver.set(driver);
 		} 
